@@ -1,0 +1,13 @@
+{
+  "name": "pwrpt",
+  "description": "",
+  "author": "",
+  "version": "0.1.0",
+  "scripts": {
+	"start": "office-toolbox sideload -m manifest.xml -a powerpoint",
+    "validate": "office-toolbox validate -m manifest.xml"
+  },
+  "dependencies": {
+    "office-toolbox": "^0.1.1"
+  }
+}

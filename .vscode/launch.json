@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/back/src/main.ts",
+            "runtimeArgs": [
+                "--experimental-specifier-resolution=node",
+                "-r", "dotenv/config"
+            ],
+            "cwd": "${workspaceFolder}/back",
+            "preLaunchTask": "back-tsc-watch",
+            "outFiles": ["${workspaceFolder}/back/build/**/*.js"],
+            "sourceMaps": true,
+            "outputCapture": "std"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Current File",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}",
+            "runtimeArgs": [
+                "--experimental-specifier-resolution=node",
+                "-r", "dotenv/config"
+            ],
+            "cwd": "${workspaceFolder}/back",
+            "preLaunchTask": "back-tsc-watch",
+            "outFiles": ["${workspaceFolder}/back/build/**/*.js"],
+            "sourceMaps": true,
+            "outputCapture": "std"
+        }
+    ]
+}
